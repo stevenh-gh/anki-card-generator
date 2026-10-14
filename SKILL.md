@@ -1,6 +1,6 @@
 ---
 name: anki-card-generator
-description: Converts provided text, notes, or documents into high-quality Anki flashcards following strict spaced-repetition and cognitive learning principles.
+description: Converts provided text, notes, or documents into comprehensive theoretical and hands-on practice Anki flashcards following strict spaced-repetition and cognitive learning principles with 100% coverage and zero list answers.
 ---
 
 # Anki Card Generator Skill
@@ -33,17 +33,36 @@ description: Converts provided text, notes, or documents into high-quality Anki 
 - Optimize for recall speed — the card should be answerable in 5–10 seconds.
 - For concepts that are similar or confusable, differentiate explicitly in the question.
 
+---
+
+## Coverage, Content Scope & Formatting Constraints
+
+1. **100% Information Coverage**: Systematically analyze the entire source material to ensure zero concepts, definitions, rules, or core facts are skipped.
+2. **Hands-On & Execution Practice**: Generate practice cards that prompt active recall of how something is done (e.g., writing/typing specific syntax, executing code snippets, configuration structures, or step-by-step procedural actions).
+3. **Strictly No Lists in Answers**: Answers must never contain lists, comma-separated multiple items, or enumerations (e.g., do not ask for a list of four configuration properties in one answer; instead, split them into separate atomic cards or test them individually).
+
+---
+
 ## Language & Tone Guidelines
 - Write all questions and answers using clear, simple, and accessible language equivalent to a 7th-grade level, avoiding unnecessarily complex academic jargon without explanation.
 
+---
+
 ## Execution Workflow
-1. Parse the content to identify the core facts, relationships, and principles.
-2. Break down into atomic, precise recall prompts.
-3. Eliminate redundancy and merge overlapping cards.
-4. Rewrite in clear, specific, unambiguous language tailored to a 7th-grade reading standard.
-5. Test yourself: Would the question still make sense in isolation? Does it have exactly one correct answer?
+
+1. **Exhaustive Parse**: Thoroughly parse the content section by section to identify every core fact, rule, principle, and syntax pattern, targeting 100% coverage.
+2. **Atomic Breakdown**: Break down concepts into atomic recall prompts, balancing theory with hands-on "how-to-write" syntax prompts. Ensure no card requires a list or multiple items in the answer.
+3. **Deduplication**: Eliminate redundancy and merge overlapping cards while ensuring no unique information or syntax rule is lost.
+4. **Refinement**: Rewrite in clear, specific, unambiguous language tailored to a 7th-grade reading standard.
+5. **Self-Testing**: Verify against source material—Did we capture everything (100% coverage)? Are there any list answers that need splitting? Would each question make sense in isolation?
+
+---
 
 ## Output Formatting Rules
-- Output as a list of cards in this format: `Q: [Question]\nA: [Answer]`
+- Output as a list of cards in this exact format:
+  ```
+  Q: [Question]
+  A: [Answer]
+  ```
 - No numbering unless the user requests it.
 - Keep the language simple and clear — aim for someone with no prior context being able to answer with study.
