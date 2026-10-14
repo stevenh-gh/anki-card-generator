@@ -1,6 +1,6 @@
 ---
 name: anki-card-generator
-description: Converts provided text, notes, or documents into comprehensive theoretical and hands-on practice Anki flashcards following strict spaced-repetition and cognitive learning principles with 100% coverage and zero list answers.
+description: Converts provided text, notes, or documents into comprehensive theoretical and practical Anki flashcards following strict spaced-repetition and cognitive learning principles with 100% coverage, zero list questions or answers, and chain-of-thought card formulation.
 ---
 
 # Anki Card Generator Skill
@@ -37,24 +37,26 @@ description: Converts provided text, notes, or documents into comprehensive theo
 
 ## Coverage, Content Scope & Formatting Constraints
 
-1. **100% Information Coverage**: Systematically analyze the entire source material to ensure zero concepts, definitions, rules, or core facts are skipped.
-2. **Hands-On & Execution Practice**: Generate practice cards that prompt active recall of how something is done (e.g., writing/typing specific syntax, executing code snippets, configuration structures, or step-by-step procedural actions).
-3. **Strictly No Lists in Answers**: Answers must never contain lists, comma-separated multiple items, or enumerations (e.g., do not ask for a list of four configuration properties in one answer; instead, split them into separate atomic cards or test them individually).
+1. **100% Information Coverage:** Systematically analyze the entire source material to ensure zero concepts, definitions, rules, or core facts are skipped.
+2. **Hands-On & Practical Application:** In addition to theoretical concepts, generate practice cards that prompt active recall of how something is done or applied (e.g., syntax, formulas, execution procedures, step-by-step problem-solving, or applying frameworks to scenarios).
+3. **Strictly No Lists in Questions or Answers:** Neither questions nor answers may ask for or contain lists, comma-separated multiple items, or enumerations (e.g., never ask "What are the four core principles...?"; instead, test each principle or item individually using separate atomic cards).
 
 ---
 
 ## Language & Tone Guidelines
-- Write all questions and answers using clear, simple, and accessible language equivalent to a 7th-grade level, avoiding unnecessarily complex academic jargon without explanation.
+- Write all questions and answers using clear, simple, and accessible language equivalent to a 6th-grade level, avoiding unnecessarily complex academic jargon without explanation.
 
 ---
 
-## Execution Workflow
+## Execution Workflow (With Chain-of-Thought)
 
-1. **Exhaustive Parse**: Thoroughly parse the content section by section to identify every core fact, rule, principle, and syntax pattern, targeting 100% coverage.
-2. **Atomic Breakdown**: Break down concepts into atomic recall prompts, balancing theory with hands-on "how-to-write" syntax prompts. Ensure no card requires a list or multiple items in the answer.
-3. **Deduplication**: Eliminate redundancy and merge overlapping cards while ensuring no unique information or syntax rule is lost.
-4. **Refinement**: Rewrite in clear, specific, unambiguous language tailored to a 7th-grade reading standard.
-5. **Self-Testing**: Verify against source material—Did we capture everything (100% coverage)? Are there any list answers that need splitting? Would each question make sense in isolation?
+Before generating the final flashcard list, use chain-of-thought reasoning to work through the following internal steps:
+
+1. **Exhaustive Parse & Analysis:** Think through the source material section by section. Map out every core fact, rule, principle, and procedural pattern to ensure 100% coverage.
+2. **Atomic Drafting & Decomposition:** Reason about how to break complex ideas into single-fact, atomic recall prompts. Plan both theoretical cards and hands-on application cards.
+3. **Constraint Check:** Review drafted cards to ensure no question or answer contains lists, multiple items, or enumerations. Split any multi-item concepts into individual cards.
+4. **Simplification & Refinement:** Evaluate the reading level. Reason through how to simplify the wording to a 6th-grade level while preserving precision and context-independence.
+5. **Final Quality Check:** Verify that each question makes sense in isolation, tests only one thing, has a single correct answer, and satisfies all methodological principles.
 
 ---
 
@@ -64,5 +66,5 @@ description: Converts provided text, notes, or documents into comprehensive theo
   Q: [Question]
   A: [Answer]
   ```
-- No numbering unless the user requests it.
+- Do not include any numbering unless explicitly requested by the user.
 - Keep the language simple and clear — aim for someone with no prior context being able to answer with study.
